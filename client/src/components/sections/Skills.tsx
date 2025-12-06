@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { skills } from "@/lib/data";
 import { Database, Code, Server, Layers } from "lucide-react";
+import { useState } from "react";
 
 // Skill Data with Logo URLs (using Devicon and local fallbacks)
-// Mapping existing data to include icons
 const skillCategoriesWithIcons = [
   {
     title: "Programming Languages",
@@ -19,11 +18,9 @@ const skillCategoriesWithIcons = [
     skills: [
       { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" },
       { name: "Playwright", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" },
-      // TestNG often doesn't have a devicon, using a specific generic URL or fallback logic if image fails
       { name: "TestNG", icon: "https://cdn.worldvectorlogo.com/logos/testng.svg" }, 
-      // Rest Assured doesn't have a widely known logo in devicons, using a generic API icon if needed or text fallback
-      { name: "Rest Assured", icon: "https://rest-assured.io/img/rest-assured-logo-cyan.png" }, // Trying official site logo or fallback
-      { name: "JMeter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" }, // JMeter is Apache, sometimes people use Kafka logo as placeholder if JMeter missing, but let's try to find better or stick to text
+      { name: "Rest Assured", icon: "https://rest-assured.io/img/rest-assured-logo-cyan.png" }, 
+      { name: "JMeter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" }, 
       { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
     ]
   },
@@ -48,6 +45,30 @@ const skillCategoriesWithIcons = [
     ]
   }
 ];
+
+// Component to handle individual skill icon with error state
+const SkillIcon = ({ name, iconUrl }: { name: string; iconUrl: string | null }) => {
+  const [hasError, setHasError] = useState(false);
+
+  if (!iconUrl || hasError) {
+    return (
+      <div className="w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border">
+        {name.charAt(0)}
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+      <img 
+        src={iconUrl} 
+        alt={name} 
+        className="w-full h-full object-contain"
+        onError={() => setHasError(true)}
+      />
+    </div>
+  );
+};
 
 export default function Skills() {
   return (
@@ -93,24 +114,7 @@ export default function Skills() {
                       key={idx}
                       className="flex items-center gap-3 p-3 rounded hover:bg-secondary/50 transition-colors border border-transparent hover:border-border/50"
                     >
-                      {skill.icon ? (
-                         <div className="w-8 h-8 shrink-0 flex items-center justify-center">
-                           <img 
-                              src={skill.icon} 
-                              alt={skill.name} 
-                              className="w-full h-full object-contain"
-                              onError={(e) => {
-                                e.currentTarget.style.display = 'none';
-                                e.currentTarget.parentElement!.innerText = skill.name.charAt(0);
-                                e.currentTarget.parentElement!.className = "w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border";
-                              }}
-                            />
-                         </div>
-                      ) : (
-                        <div className="w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border">
-                          {skill.name.charAt(0)}
-                        </div>
-                      )}
+                      <SkillIcon name={skill.name} iconUrl={skill.icon} />
                       <span className="text-base font-semibold text-foreground tracking-wide">{skill.name}</span>
                     </div>
                   ))}

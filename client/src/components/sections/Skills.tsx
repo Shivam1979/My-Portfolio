@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Database, Code, Server, Layers } from "lucide-react";
 import { useState } from "react";
 
-// Skill Data with Logo URLs (using Devicon and local fallbacks)
+// Skill Data with Logo URLs
 const skillCategoriesWithIcons = [
   {
     title: "Programming Languages",
@@ -18,8 +18,9 @@ const skillCategoriesWithIcons = [
     skills: [
       { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" },
       { name: "Playwright", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" },
-      { name: "TestNG", icon: "https://cdn.worldvectorlogo.com/logos/testng.svg" }, 
-      { name: "Rest Assured", icon: "https://rest-assured.io/img/rest-assured-logo-cyan.png" }, 
+      // Updated URLs
+      { name: "TestNG", icon: "https://raw.githubusercontent.com/cbeust/testng/master/src/main/resources/testng-logo-small.png" }, 
+      { name: "Rest Assured", icon: "https://avatars.githubusercontent.com/u/19369327?s=200&v=4" }, // GitHub avatar for Rest Assured org
       { name: "JMeter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" }, 
       { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
     ]
@@ -40,7 +41,7 @@ const skillCategoriesWithIcons = [
     skills: [
       { name: "MS SQL Server", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" },
       { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
-      { name: "HeidiSQL", icon: null },
+      { name: "HeidiSQL", icon: "https://www.heidisql.com/images/heidisql_logo.png" }, // Trying official
       { name: "DBeaver", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dbeaver/dbeaver-original.svg" },
     ]
   }
@@ -50,7 +51,16 @@ const skillCategoriesWithIcons = [
 const SkillIcon = ({ name, iconUrl }: { name: string; iconUrl: string | null }) => {
   const [hasError, setHasError] = useState(false);
 
+  // If we know it's HeidiSQL and it failed, or just general failure, use text fallback
   if (!iconUrl || hasError) {
+    // Custom fallback for HeidiSQL if the image fails (likely due to CORS)
+    if (name === "HeidiSQL") {
+       return (
+        <div className="w-8 h-8 shrink-0 rounded bg-[#1e293b] flex items-center justify-center text-[10px] font-bold text-green-500 border border-green-900/50">
+          SQL
+        </div>
+       );
+    }
     return (
       <div className="w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border">
         {name.charAt(0)}
@@ -59,7 +69,7 @@ const SkillIcon = ({ name, iconUrl }: { name: string; iconUrl: string | null }) 
   }
 
   return (
-    <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+    <div className="w-8 h-8 shrink-0 flex items-center justify-center bg-white/5 rounded p-1">
       <img 
         src={iconUrl} 
         alt={name} 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, Cpu, Network, Share2, Briefcase } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Briefcase, Network, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { heroTaglines, personalInfo } from "@/lib/data";
@@ -14,6 +14,12 @@ const targetRoles = [
 
 export default function Hero() {
   const [taglineIndex, setTaglineIndex] = useState(0);
+
+  // Calculate total experience dynamically
+  const startDate = new Date("2024-01-01"); // Jan 2024
+  const currentDate = new Date();
+  const diffTime = Math.abs(currentDate.getTime() - startDate.getTime());
+  const diffYears = (diffTime / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,16 +51,25 @@ export default function Hero() {
           transition={{ duration: 1, type: "spring" }}
           className="flex flex-col items-center"
         >
-          {/* AI/Tech Badge */}
+          {/* Status Badge */}
           <motion.div 
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-md"
+            className="flex items-center gap-3 mb-8"
           >
-            <Briefcase className="w-4 h-4 text-accent animate-pulse" />
-            <span className="text-xs font-mono font-bold tracking-widest text-accent uppercase">
-              Open to Work / Looking for Opportunities
-            </span>
+             <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-md">
+                <Briefcase className="w-4 h-4 text-accent animate-pulse" />
+                <span className="text-xs font-mono font-bold tracking-widest text-accent uppercase">
+                  Open to Work
+                </span>
+             </div>
+
+             <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md">
+                <Clock className="w-4 h-4 text-primary" />
+                <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+                  Exp: {diffYears} Years
+                </span>
+             </div>
           </motion.div>
           
           <h1 className="text-5xl md:text-8xl font-bold font-heading tracking-tight text-foreground mb-4 relative">

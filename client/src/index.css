@@ -32,20 +32,20 @@
 }
 
 :root {
-  /* Navy Blue & Cyan Theme */
-  --background: 220 30% 98%; /* Light cool gray */
-  --foreground: 222 47% 11%; /* Deep Navy */
+  /* LIGHT MODE - Clean Future Tech */
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
 
-  --primary: 222 47% 11%; /* Deep Navy */
+  --primary: 222 47% 11%;
   --primary-foreground: 210 40% 98%;
 
-  --secondary: 210 40% 96%; /* Very light blue-gray */
+  --secondary: 210 40% 96%;
   --secondary-foreground: 222 47% 11%;
 
-  --muted: 210 40% 96%;
+  --muted: 210 40% 90%;
   --muted-foreground: 215 16% 47%;
 
-  --accent: 186 100% 35%; /* Teal/Cyan */
+  --accent: 190 100% 35%; /* Cyan/Teal */
   --accent-foreground: 210 40% 98%;
 
   --card: 0 0% 100%;
@@ -53,33 +53,32 @@
 
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --ring: 222 47% 11%;
-
-  --radius: 0.5rem;
+  --ring: 190 100% 35%;
 }
 
 .dark {
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
+  /* DARK MODE - Cyber/AI Neon */
+  --background: 222 47% 6%; /* Very dark navy/black */
+  --foreground: 180 10% 90%;
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222 47% 11%;
+  --primary: 186 100% 50%; /* Cyan Neon */
+  --primary-foreground: 222 47% 6%;
 
-  --secondary: 217 33% 17%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 217 33% 12%;
+  --secondary-foreground: 180 10% 90%;
 
-  --muted: 217 33% 17%;
+  --muted: 217 33% 15%;
   --muted-foreground: 215 20% 65%;
 
-  --accent: 186 100% 42%;
-  --accent-foreground: 222 47% 11%;
+  --accent: 186 100% 50%; /* Cyan Neon */
+  --accent-foreground: 222 47% 6%;
 
-  --card: 222 47% 13%;
-  --card-foreground: 210 40% 98%;
+  --card: 220 40% 10%;
+  --card-foreground: 180 10% 90%;
 
   --border: 217 33% 20%;
   --input: 217 33% 20%;
-  --ring: 212 90% 70%;
+  --ring: 186 100% 50%;
 }
 
 @layer base {
@@ -87,9 +86,30 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom 3D & AI Effects */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px hsla(var(--accent) / 0.5);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, hsla(var(--foreground) / 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, hsla(var(--foreground) / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }

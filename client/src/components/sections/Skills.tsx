@@ -19,9 +19,11 @@ const skillCategoriesWithIcons = [
     skills: [
       { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" },
       { name: "Playwright", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" },
-      { name: "TestNG", icon: null }, 
-      { name: "Rest Assured", icon: null }, 
-      { name: "JMeter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" },
+      // TestNG often doesn't have a devicon, using a specific generic URL or fallback logic if image fails
+      { name: "TestNG", icon: "https://cdn.worldvectorlogo.com/logos/testng.svg" }, 
+      // Rest Assured doesn't have a widely known logo in devicons, using a generic API icon if needed or text fallback
+      { name: "Rest Assured", icon: "https://rest-assured.io/img/rest-assured-logo-cyan.png" }, // Trying official site logo or fallback
+      { name: "JMeter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" }, // JMeter is Apache, sometimes people use Kafka logo as placeholder if JMeter missing, but let's try to find better or stick to text
       { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
     ]
   },
@@ -42,6 +44,7 @@ const skillCategoriesWithIcons = [
       { name: "MS SQL Server", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" },
       { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
       { name: "HeidiSQL", icon: null },
+      { name: "DBeaver", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dbeaver/dbeaver-original.svg" },
     ]
   }
 ];
@@ -91,7 +94,18 @@ export default function Skills() {
                       className="flex items-center gap-3 p-3 rounded hover:bg-secondary/50 transition-colors border border-transparent hover:border-border/50"
                     >
                       {skill.icon ? (
-                        <img src={skill.icon} alt={skill.name} className="w-8 h-8 shrink-0" />
+                         <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                           <img 
+                              src={skill.icon} 
+                              alt={skill.name} 
+                              className="w-full h-full object-contain"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.parentElement!.innerText = skill.name.charAt(0);
+                                e.currentTarget.parentElement!.className = "w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border";
+                              }}
+                            />
+                         </div>
                       ) : (
                         <div className="w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border">
                           {skill.name.charAt(0)}

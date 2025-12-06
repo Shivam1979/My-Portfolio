@@ -14,10 +14,9 @@ export const personalInfo = {
 
 export const heroTaglines = [
   "Java • Selenium • Playwright • RestAssured • TestNG • SQL • CI/CD",
-  "Specializing in UI & API Automation Frameworks",
-  "Building Scalable & Reliable Test Solutions",
-  "Improving Test Coverage & Execution Speed",
-  "Winner of Smart India Hackathon 2022"
+  "Winner of Smart India Hackathon 2022",
+  "Stellar Team Award for (RIB/RMB Project)",
+  "Rising Star Award (UOB & MW Upgrade Project)"
 ];
 
 export const aboutMe = "I am an Automation Test Engineer (SDET) with strong hands-on experience in UI & API automation, framework development, SQL validation, and CI/CD integration. I specialize in building scalable, maintainable automation solutions using Java, Selenium WebDriver, TestNG, Playwright (Java), and RestAssured. My focus is on improving test coverage, reliability, and execution speed through automation and optimized frameworks.";

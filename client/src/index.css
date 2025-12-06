@@ -45,7 +45,8 @@
   --muted: 210 40% 90%;
   --muted-foreground: 215 16% 47%;
 
-  --accent: 190 100% 35%; /* Cyan/Teal */
+  /* Darkened the accent color as requested (Blue/Teal -> Deeper Blue) */
+  --accent: 210 100% 40%; 
   --accent-foreground: 210 40% 98%;
 
   --card: 0 0% 100%;
@@ -53,7 +54,7 @@
 
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --ring: 190 100% 35%;
+  --ring: 210 100% 40%;
 }
 
 .dark {
@@ -61,7 +62,7 @@
   --background: 222 47% 6%; /* Very dark navy/black */
   --foreground: 180 10% 90%;
 
-  --primary: 186 100% 50%; /* Cyan Neon */
+  --primary: 190 100% 45%; /* Slightly deeper/richer Cyan Neon */
   --primary-foreground: 222 47% 6%;
 
   --secondary: 217 33% 12%;
@@ -70,7 +71,7 @@
   --muted: 217 33% 15%;
   --muted-foreground: 215 20% 65%;
 
-  --accent: 186 100% 50%; /* Cyan Neon */
+  --accent: 190 100% 45%; /* Slightly deeper/richer Cyan Neon */
   --accent-foreground: 222 47% 6%;
 
   --card: 220 40% 10%;
@@ -78,7 +79,7 @@
 
   --border: 217 33% 20%;
   --input: 217 33% 20%;
-  --ring: 186 100% 50%;
+  --ring: 190 100% 45%;
 }
 
 @layer base {

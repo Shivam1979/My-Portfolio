@@ -1,0 +1,62 @@
+I am creating a personal portfolio website for myself.  
+Use the following resume details to generate complete website content:
+
+Name: Shivam Singh  
+Role: SDET / Test Automation Engineer  
+Location: Kopar Khairane, Navi Mumbai  
+Phone: +91 9302213653  
+Email: shivamsingh13653@gmail.com  
+
+Education:
+- B.Tech in Electronics & Communication Engineering (CGPA: 7.92)
+
+Skills:
+- Core Java, SQL
+- Selenium WebDriver, Playwright (Java), TestNG, Rest Assured, JMeter, Postman
+- Maven, IntelliJ IDEA, Azure DevOps, Git
+- POM Framework, Automation Framework Design, DDT
+- Databases: MS SQL Server, HeidiSQL, MySQL
+- Soft skills: Teamwork, Time Management, Agile
+
+Experience:
+Test Engineer — Quality Kiosk Technologies Pvt. Ltd. (Jan 2024 – Present)
+- Developed automation using Selenium, Playwright (Java), TestNG
+- API automation using Rest Assured, Postman
+- Performance testing using JMeter
+- Built and maintained POM frameworks
+- Integrated suites into Azure DevOps CI/CD pipelines
+- SQL-based backend validation
+- Provided internal training on automation, Git, Azure DevOps
+
+Projects:
+1. Retail Internet Banking Automation (RIB)
+   - Selenium WebDriver, TestNG, Maven, SQL (HeidiSQL), Git, Azure DevOps, POM
+
+2. Unified Onboarding Automation (UOB)
+   - Playwright (Java), API Testing, SQL Server, Azure DevOps, POM
+
+3. Middleware Upgrade (COLO → OCP Migration)
+   - Rest Assured, Postman, TestNG, Maven, JMeter, ActiveMQ, Azure DevOps
+
+Certifications:
+- Core Java – Udemy
+- SQL – Udemy
+
+Achievements:
+- Winner, Smart India Hackathon 2022
+- Stellar Team Award (2024)
+- Rising Star Award (2025)
+
+Using this information, generate the following:
+
+1. A professional HERO section tagline (5 variations)
+2. A clean 4–6 sentence "About Me" section
+3. A polished Experience section written for a portfolio website (not resume style)
+4. Detailed, portfolio-ready project descriptions (3–5 sentences each + bullet points)
+5. A Skills section grouped into categories (Languages, Automation Tools, Testing, Databases, Others)
+6. A short one-line summary for metadata / SEO
+7. A Contact section paragraph
+8. A LinkedIn-style “About” summary (150–200 words)
+9. A 2–3 sentence professional summary for top of resume or portfolio homepage
+
+Make everything concise, professional, engaging, and tailored for an SDET/Automation Engineer portfolio.

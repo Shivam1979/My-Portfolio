@@ -2,34 +2,36 @@ import { Code, Database, Globe, Layers, Server, Terminal, TestTube, MonitorPlay 
 
 export const personalInfo = {
   name: "Shivam Singh",
-  role: "SDET / Test Automation Engineer",
-  location: "Kopar Khairane, Navi Mumbai",
-  phone: "+91 9302213653",
+  role: "SDET | Test Automation Engineer | SIH’22 Winner",
+  location: "Navi Mumbai, India",
+  phone: "9302213653",
   email: "shivamsingh13653@gmail.com",
   social: {
-    linkedin: "#", // Placeholder as not provided
-    github: "#"    // Placeholder as not provided
+    linkedin: "https://linkedin.com/in/itzshivamsingh", 
+    github: "#"    
   }
 };
 
 export const heroTaglines = [
-  "Architecting Quality through Code & Automation.",
-  "Building Robust Frameworks for Flawless Software.",
-  "Shivam Singh: Precision in Automation, Excellence in Quality.",
-  "Transforming Testing into a Strategic Advantage.",
-  "SDET & Automation Engineer: Bridging Code and Quality."
+  "Java • Selenium • Playwright • RestAssured • TestNG • SQL • CI/CD",
+  "Specializing in UI & API Automation Frameworks",
+  "Building Scalable & Reliable Test Solutions",
+  "Improving Test Coverage & Execution Speed",
+  "Winner of Smart India Hackathon 2022"
 ];
 
-export const aboutMe = "I am a detail-oriented SDET and Test Automation Engineer with a passion for building robust testing frameworks. With a strong foundation in Electronics & Communication Engineering, I bridge the gap between hardware precision and software agility. I specialize in designing scalable automation solutions using Java, Selenium, and Playwright to ensure seamless software delivery. My approach combines technical expertise with a deep understanding of QA processes to drive efficiency and reliability. I thrive in agile environments, constantly learning and adapting to new technologies.";
+export const aboutMe = "I am an Automation Test Engineer (SDET) with strong hands-on experience in UI & API automation, framework development, SQL validation, and CI/CD integration. I specialize in building scalable, maintainable automation solutions using Java, Selenium WebDriver, TestNG, Playwright (Java), and RestAssured. My focus is on improving test coverage, reliability, and execution speed through automation and optimized frameworks.";
 
 export const summaryProfile = "Results-driven SDET with extensive experience in building scalable automation frameworks using Java, Selenium, and Playwright. Proven track record in API testing, CI/CD integration, and performance engineering for enterprise-grade banking applications.";
 
-export const linkedInAbout = "As a passionate SDET and Test Automation Engineer, I specialize in ensuring software quality through innovative automation solutions. With a background in Electronics & Communication Engineering, I bring a structured and analytical approach to solving complex testing challenges.\n\nMy expertise spans across Core Java, Selenium WebDriver, Playwright, and API automation tools like Rest Assured and Postman. I have successfully designed and maintained Page Object Model (POM) frameworks, integrated automated suites into Azure DevOps CI/CD pipelines, and conducted performance testing using JMeter.\n\nCurrently, at Quality Kiosk Technologies, I lead automation initiatives for critical banking and middleware projects, optimizing regression cycles and enhancing test coverage. I am a strong advocate for Agile methodologies and enjoy mentoring teams on automation best practices.\n\nI am driven by the challenge of delivering bug-free, high-performance software and am constantly exploring new tools to elevate testing standards.";
+export const linkedInAbout = "I work across end-to-end QA processes, including requirement analysis, test case design, functional testing, regression testing, database validation, and automation script development.\n\nI am continuously enhancing my skills in POM framework design, reusable utilities, reporting setup, debugging, and DevOps-based executions.\n\nKey Competencies:\n• UI Automation – Selenium WebDriver, Playwright (Java)\n• API Automation – Postman, RestAssured\n• SQL & DB Validation – DBeaver, SSMS, HeidiSQL\n• Framework Design (POM, Modular, DDT)\n• CI/CD Pipeline Execution & Agile Collaboration";
 
 export const education = {
-  degree: "B.Tech in Electronics & Communication Engineering",
+  degree: "B.Tech – Electronics & Communication Engineering",
   cgpa: "7.92",
-  school: "University / Institute Name" // Placeholder
+  school: "Sagar Institute of Research & Technology, Bhopal (2020 – 2024)",
+  school2: "Class 12 – CBSE (2019 – 2020)",
+  school3: "Class 10 – MP Board (2017 – 2018)"
 };
 
 export const skills = [
@@ -41,34 +43,48 @@ export const skills = [
   {
     category: "Automation Tools",
     icon: MonitorPlay,
-    items: ["Selenium WebDriver", "Playwright (Java)", "TestNG", "Rest Assured", "JMeter", "Postman"]
+    items: ["Selenium WebDriver", "Playwright (Java)", "Rest Assured", "Postman", "TestNG", "JMeter"]
   },
   {
-    category: "DevOps & Tools",
+    category: "DevOps & Databases",
     icon: Terminal,
-    items: ["Maven", "IntelliJ IDEA", "Azure DevOps", "Git", "HeidiSQL", "MySQL", "MS SQL Server"]
+    items: ["Azure DevOps", "Git", "Maven", "SQL Server", "HeidiSQL", "DBeaver", "SSMS"]
   },
   {
     category: "Frameworks & Concepts",
     icon: Layers,
-    items: ["POM Framework", "Automation Framework Design", "DDT (Data Driven Testing)", "Agile Methodology"]
+    items: ["POM Framework", "Modular Framework", "DDT (Data Driven Testing)", "Reusable Utilities", "Agile"]
   }
 ];
 
 export const experience = [
   {
-    role: "Test Engineer",
-    company: "Quality Kiosk Technologies Pvt. Ltd.",
-    period: "Jan 2024 – Present",
+    role: "Software Test Engineer",
+    company: "QualityKiosk Technologies Pvt. Ltd.",
+    period: "March 2024 – Present",
+    location: "Navi Mumbai, India",
     description: "Spearheading automation initiatives for banking and financial domains, focusing on framework development and CI/CD integration.",
     achievements: [
-      "Developed robust UI automation scripts using Selenium and Playwright (Java) with TestNG.",
-      "Executed comprehensive API automation utilizing Rest Assured and Postman.",
-      "Conducted performance testing and analysis using JMeter to ensure system stability.",
-      "Architected and maintained scalable Page Object Model (POM) frameworks.",
-      "Seamlessly integrated automated test suites into Azure DevOps CI/CD pipelines.",
-      "Performed rigorous SQL-based backend validation to ensure data integrity.",
-      "Mentored team members through internal training sessions on Automation, Git, and Azure DevOps."
+      "Built and executed UI automation scripts using Selenium WebDriver, TestNG, Playwright (Java).",
+      "Developed API automation suites using RestAssured, validating end-to-end backend workflows.",
+      "Designed and maintained POM-based automation frameworks with reusable utilities and modular components.",
+      "Integrated automation test suites into Azure DevOps CI/CD pipelines for continuous execution.",
+      "Performed functional testing, regression testing, and requirement-based test case writing.",
+      "Conducted API testing using Postman and backend validation using SQL (DBeaver, HeidiSQL, SSMS).",
+      "Collaborated with developers, BAs, and QA leads to resolve issues and ensure timely releases."
+    ]
+  },
+  {
+    role: "Trainee Software Engineer",
+    company: "QualityKiosk Technologies Pvt. Ltd.",
+    period: "Jan 2024 – March 2024",
+    location: "Navi Mumbai, India",
+    description: "Initial training and foundation in automation and QA processes.",
+    achievements: [
+      "Learned automation fundamentals, Core Java, and built basic Selenium scripts.",
+      "Practiced API testing and SQL queries for test data validation.",
+      "Developed understanding of SDLC, Agile ceremonies, Git, Maven, and QA workflows.",
+      "Performed manual testing tasks and wrote structured test cases."
     ]
   }
 ];
@@ -114,19 +130,28 @@ export const projects = [
 
 export const achievements = [
   {
-    title: "Rising Star Award",
-    year: "2025",
-    description: "Recognized for rapid growth and contribution to automation excellence."
-  },
-  {
-    title: "Stellar Team Award",
-    year: "2024",
-    description: "Awarded for exceptional collaboration and delivery in the RIB project."
-  },
-  {
-    title: "Winner, Smart India Hackathon",
+    title: "Winner, Smart India Hackathon (SIH)",
     year: "2022",
-    description: "National level recognition for innovative problem solving."
+    description: "Won the national-level hackathon by delivering a real-world, high-pressure solution within 36 hours. Contributed to development, testing, and end-to-end feature validation.",
+    link: "https://www.linkedin.com/posts/itzshivamsingh_smartindiahackathon-innovationnation-techtrailblazers-activity-7083397360256528384-R6SF?utm_source=share&utm_medium=member_desktop"
+  },
+  {
+    title: "Rising Star Award (UOB & MW Upgrade Project)",
+    year: "2025",
+    description: "Recognized for rapid growth and contribution to automation excellence.",
+    link: "https://www.linkedin.com/posts/itzshivamsingh_teamwork-collaboration-activity-726938535198978477-qo-0?utm_source=share&utm_medium=member_desktop"
+  },
+  {
+    title: "Stellar Team Award (RIB/RMB Project)",
+    year: "2024",
+    description: "Awarded for exceptional collaboration and delivery in the RIB project.",
+    link: "https://www.linkedin.com/posts/itzshivamsingh_teamwork-collaboration-activity-7269385351989784577-qo-0?utm_source=share&utm_medium=member_desktop"
+  },
+  {
+    title: "Finalist & Participant, Smart India Hackathon",
+    year: "2021-2022",
+    description: "Participated in idea development, prototype design, basic testing, and problem analysis.",
+    link: null
   }
 ];
 

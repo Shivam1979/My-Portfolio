@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { aboutMe, linkedInAbout, achievements, certifications } from "@/lib/data";
-import { Award, CheckCircle, GraduationCap } from "lucide-react";
+import { aboutMe, linkedInAbout, achievements, certifications, education } from "@/lib/data";
+import { Award, CheckCircle, GraduationCap, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
         >
           <div className="flex flex-col gap-4 mb-12 text-center">
             <h2 className="text-3xl font-bold font-heading md:text-4xl text-foreground">
-              About Me
+              Professional Profile
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
           </div>
@@ -24,9 +25,9 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h3 className="text-xl font-semibold font-heading text-foreground">
-                Professional Profile
+                Summary
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed whitespace-pre-line text-justify">
                 {aboutMe}
               </p>
               
@@ -34,25 +35,39 @@ export default function About() {
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-accent" /> Education
                 </h4>
-                <div className="space-y-1">
-                  <p className="font-medium">B.Tech in Electronics & Communication</p>
-                  <p className="text-sm text-muted-foreground">CGPA: 7.92</p>
+                <div className="space-y-4">
+                  <div className="border-l-2 border-accent pl-4">
+                    <p className="font-medium text-foreground">{education.degree}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{education.school}</p>
+                    <Badge variant="outline" className="mt-2 text-xs border-accent/30 text-accent bg-accent/5">CGPA: {education.cgpa}</Badge>
+                  </div>
+                  <div className="pl-4 border-l border-border">
+                    <p className="text-sm text-muted-foreground">{education.school2}</p>
+                    <p className="text-sm text-muted-foreground">{education.school3}</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="space-y-6">
                <h3 className="text-xl font-semibold font-heading text-foreground">
-                Achievements & Certifications
+                Achievements & Awards
               </h3>
               
               <div className="space-y-4">
                 {achievements.map((item, idx) => (
-                  <div key={idx} className="flex gap-3">
+                  <div key={idx} className="flex gap-3 p-3 rounded-lg hover:bg-background/50 transition-colors border border-transparent hover:border-border/50">
                     <Award className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-medium text-foreground">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description} ({item.year})</p>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h4 className="font-medium text-foreground">{item.title}</h4>
+                        {item.link && (
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1 text-xs border border-accent/30 px-1.5 py-0.5 rounded-sm">
+                            Verify <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-1">{item.description} ({item.year})</p>
                     </div>
                   </div>
                 ))}
@@ -71,16 +86,6 @@ export default function About() {
               </div>
             </div>
           </div>
-          
-          <div className="mt-16 pt-10 border-t border-border">
-             <h3 className="text-xl font-semibold font-heading text-foreground mb-6 text-center">
-                Extended Bio
-              </h3>
-             <p className="text-muted-foreground leading-relaxed whitespace-pre-line max-w-3xl mx-auto text-justify">
-               {linkedInAbout}
-             </p>
-          </div>
-
         </motion.div>
       </div>
     </section>

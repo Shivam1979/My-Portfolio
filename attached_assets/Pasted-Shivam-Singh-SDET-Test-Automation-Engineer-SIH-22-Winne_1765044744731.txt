@@ -1,0 +1,121 @@
+Shivam Singh
+
+SDET | Test Automation Engineer | SIH’22 Winner
+Java • Selenium • Playwright • RestAssured • TestNG • SQL • CI/CD
+📍 Navi Mumbai, India
+
+📞 9302213653
+📧 shivamsingh13653@gmail.com
+
+🔗 LinkedIn: linkedin.com/in/itzshivamsingh
+
+⭐ Summary (Automation-Focused)
+
+I am an Automation Test Engineer (SDET) with strong hands-on experience in UI & API automation, framework development, SQL validation, and CI/CD integration. I specialize in building scalable, maintainable automation solutions using Java, Selenium WebDriver, TestNG, Playwright (Java), and RestAssured.
+
+I work across end-to-end QA processes, including requirement analysis, test case design, functional testing, regression testing, database validation, and automation script development.
+My focus is on improving test coverage, reliability, and execution speed through automation and optimized frameworks.
+
+I am continuously enhancing my skills in POM framework design, reusable utilities, reporting setup, debugging, and DevOps-based executions.
+
+Key Competencies
+
+UI Automation – Selenium WebDriver, Playwright (Java)
+
+API Automation – Postman, RestAssured
+
+SQL & DB Validation – DBeaver, SSMS, HeidiSQL
+
+Java • TestNG • Maven • Git • Azure DevOps
+
+Framework Design (POM, Modular, DDT)
+
+Functional, Regression, API, and Integration Testing
+
+CI/CD Pipeline Execution
+
+Debugging, Defect Analysis, Documentation
+
+Agile Collaboration & Problem Solving
+
+💼 Experience
+QualityKiosk Technologies Pvt. Ltd.
+Software Test Engineer
+
+March 2024 – Present | Navi Mumbai, India
+
+Automation Responsibilities:
+
+Built and executed UI automation scripts using Selenium WebDriver, TestNG, Playwright (Java).
+
+Developed API automation suites using RestAssured, validating end-to-end backend workflows.
+
+Designed and maintained POM-based automation frameworks with reusable utilities and modular components.
+
+Integrated automation test suites into Azure DevOps CI/CD pipelines for continuous execution.
+
+Testing Responsibilities:
+
+Performed functional testing, regression testing, and requirement-based test case writing.
+
+Conducted API testing using Postman and backend validation using SQL (DBeaver, HeidiSQL, SSMS).
+
+Improved test coverage, documentation quality, and overall test efficiency.
+
+Collaborated with developers, BAs, and QA leads to resolve issues and ensure timely releases.
+
+Trainee Software Engineer
+
+Jan 2024 – March 2024 | Navi Mumbai, India
+
+Learned automation fundamentals, Core Java, and built basic Selenium scripts.
+
+Practiced API testing and SQL queries for test data validation.
+
+Developed understanding of SDLC, Agile ceremonies, Git, Maven, and QA workflows.
+
+Performed manual testing tasks and wrote structured test cases.
+
+🏆 Achievements
+Smart India Hackathon (SIH) 2022 – Winner
+
+Won the national-level hackathon by delivering a real-world, high-pressure solution within 36 hours.
+
+Contributed to development, testing, and end-to-end feature validation.
+
+Smart India Hackathon 2021–2022 – Finalist & Participant
+
+Participated in the idea development, prototype design, basic testing, and problem analysis.
+
+Gained valuable teamwork and problem-solving experience.
+
+🎓 Education
+
+B.Tech – Electronics & Communication Engineering
+Sagar Institute of Research & Technology, Bhopal
+2020 – 2024
+
+Class 12 – CBSE (2019 – 2020)
+Class 10 – MP Board (2017 – 2018)
+
+🛠️ Skills (Automation-Focused)
+
+Automation Tools: Selenium WebDriver, Playwright (Java), RestAssured, Postman
+
+Programming: Core Java
+
+Testing: Functional Testing, Regression Testing, API Testing, Automation Testing
+
+Frameworks: POM, DDT, Reusable Utilities, Modular Framework
+
+DevOps: Azure DevOps, Git
+
+Databases: SQL Server, HeidiSQL, DBeaver
+
+Other: Debugging, Problem-Solving, Documentation, Agile
+
+If you want, I can also prepare:
+✅ LinkedIn About Section (short version)
+✅ Portfolio “About Me” page
+✅ GitHub profile description
+✅ Resume (ATS optimized) version

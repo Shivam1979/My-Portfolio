@@ -48,7 +48,7 @@ const skillCategoriesWithIcons = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-secondary/20">
+    <section id="skills" className="py-24 bg-secondary/10">
       <div className="container px-6 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,20 +84,20 @@ export default function Skills() {
                   <h3 className="font-semibold font-heading text-lg">{category.title}</h3>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {category.skills.map((skill, idx) => (
                     <div 
                       key={idx}
-                      className="flex items-center gap-3 p-2 rounded hover:bg-secondary/50 transition-colors"
+                      className="flex items-center gap-3 p-3 rounded hover:bg-secondary/50 transition-colors border border-transparent hover:border-border/50"
                     >
                       {skill.icon ? (
-                        <img src={skill.icon} alt={skill.name} className="w-5 h-5 shrink-0" />
+                        <img src={skill.icon} alt={skill.name} className="w-8 h-8 shrink-0" />
                       ) : (
-                        <div className="w-5 h-5 shrink-0 rounded bg-secondary flex items-center justify-center text-[10px] font-bold text-muted-foreground border border-border">
+                        <div className="w-8 h-8 shrink-0 rounded bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground border border-border">
                           {skill.name.charAt(0)}
                         </div>
                       )}
-                      <span className="text-sm font-medium text-foreground/80">{skill.name}</span>
+                      <span className="text-base font-semibold text-foreground tracking-wide">{skill.name}</span>
                     </div>
                   ))}
                 </div>

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { Check, Database } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -14,12 +14,15 @@ export default function Projects() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
           >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-accent/30 bg-accent/5 text-accent font-mono text-sm mb-4">
+               <Database className="w-3 h-3" />
+               <span>/home/work/projects</span>
+            </div>
             <h2 className="text-3xl font-bold font-heading md:text-4xl text-foreground">
-              Featured Projects
+              Key Project Deliverables
             </h2>
-            <div className="w-20 h-1 bg-accent mx-auto rounded-full mt-4" />
             <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-              Key automation frameworks and technical initiatives I've delivered.
+              Major automation initiatives executed during professional tenure.
             </p>
           </motion.div>
         </div>
@@ -33,10 +36,10 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300 border-border/60 hover:border-accent/50 group">
+              <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300 border-border/60 hover:border-accent/50 group bg-card/50 backdrop-blur-sm">
                 <CardHeader>
-                  <div className="mb-2">
-                    <Badge variant="outline" className="text-xs font-normal text-muted-foreground group-hover:text-accent group-hover:border-accent transition-colors">
+                  <div className="mb-3">
+                    <Badge variant="outline" className="text-xs font-normal bg-accent/10 text-accent border-accent/20">
                       {project.role}
                     </Badge>
                   </div>
@@ -49,7 +52,7 @@ export default function Projects() {
                     {project.description}
                   </p>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-4">
                     {project.points.map((point, idx) => (
                       <div key={idx} className="flex gap-2 items-start text-sm text-foreground/80">
                         <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -63,7 +66,7 @@ export default function Projects() {
                     {project.tech.map((tech, idx) => (
                       <span 
                         key={idx} 
-                        className="px-2 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-md font-mono"
+                        className="px-2 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-md font-mono border border-border/50"
                       >
                         {tech}
                       </span>

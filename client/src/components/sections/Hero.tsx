@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, Cpu, Network, Share2 } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Cpu, Network, Share2, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { heroTaglines, personalInfo } from "@/lib/data";
@@ -51,9 +51,9 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             className="flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-md"
           >
-            <Cpu className="w-4 h-4 text-accent animate-pulse" />
+            <Briefcase className="w-4 h-4 text-accent animate-pulse" />
             <span className="text-xs font-mono font-bold tracking-widest text-accent uppercase">
-              System Online // Ready to Automate
+              Open to Work / Looking for Opportunities
             </span>
           </motion.div>
           
@@ -90,33 +90,33 @@ export default function Hero() {
             <Button size="lg" className="min-w-[160px] text-base font-bold shadow-[0_0_20px_rgba(var(--accent),0.3)] hover:shadow-[0_0_30px_rgba(var(--accent),0.5)] transition-all" asChild>
               <a href="#projects">
                 <Network className="w-4 h-4 mr-2" />
-                Analyze Work
+                View Key Projects
               </a>
             </Button>
             <Button size="lg" variant="outline" className="min-w-[160px] text-base hover:bg-accent/10 hover:text-accent border-foreground/20" asChild>
-              <a href="#contact">Initialize Contact</a>
+              <a href="#contact">Contact Me</a>
             </Button>
           </div>
 
           <div className="flex items-center justify-center gap-8 mt-16 text-muted-foreground">
-             <div className="flex flex-col items-center gap-2 group cursor-pointer">
+             <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group cursor-pointer">
                 <div className="p-3 rounded-full bg-secondary group-hover:bg-accent/20 transition-colors">
                   <Github className="w-6 h-6 group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs font-mono uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Github</span>
-             </div>
-             <div className="flex flex-col items-center gap-2 group cursor-pointer">
+             </a>
+             <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group cursor-pointer">
                 <div className="p-3 rounded-full bg-secondary group-hover:bg-accent/20 transition-colors">
                   <Linkedin className="w-6 h-6 group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs font-mono uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">LinkedIn</span>
-             </div>
-             <div className="flex flex-col items-center gap-2 group cursor-pointer">
+             </a>
+             <a href={`mailto:${personalInfo.email}`} className="flex flex-col items-center gap-2 group cursor-pointer">
                 <div className="p-3 rounded-full bg-secondary group-hover:bg-accent/20 transition-colors">
                   <Mail className="w-6 h-6 group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs font-mono uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Email</span>
-             </div>
+             </a>
           </div>
         </motion.div>
       </div>

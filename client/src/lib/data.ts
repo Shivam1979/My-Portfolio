@@ -91,7 +91,7 @@ export const experience = [
 export const projects = [
   {
     title: "Retail Internet Banking Automation (RIB)",
-    role: "Automation Engineer",
+role: "Test Engineer",
     tech: ["Selenium WebDriver", "TestNG", "Maven", "SQL", "Azure DevOps"],
     description: "A comprehensive automation suite designed to validate the retail internet banking platform's functionality and security.",
     points: [
@@ -103,7 +103,7 @@ export const projects = [
   },
   {
     title: "Unified Onboarding Automation (UOB)",
-    role: "SDET",
+   role: "Test Engineer",
     tech: ["Playwright (Java)", "API Testing", "SQL Server", "Azure DevOps"],
     description: "End-to-end automation for a unified customer onboarding system, focusing on speed and reliability across multiple touchpoints.",
     points: [
@@ -114,8 +114,8 @@ export const projects = [
     ]
   },
   {
-    title: "Middleware Upgrade (COLO → OCP Migration)",
-    role: "Performance & Integration Tester",
+    title: "Middleware Upgrade",
+    role: "Test Engineer",
     tech: ["Rest Assured", "JMeter", "ActiveMQ", "Azure DevOps"],
     description: "Validation of critical middleware migration from Colocation to OpenShift Container Platform (OCP) ensuring zero downtime.",
     points: [

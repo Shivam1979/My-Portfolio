@@ -19,7 +19,7 @@ const skillCategoriesWithIcons = [
       { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" },
       { name: "Playwright", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" },
       // Updated URLs
-      { name: "TestNG", icon: "https://raw.githubusercontent.com/cbeust/testng/master/src/main/resources/testng-logo-small.png" }, 
+      { name: "TestNG", icon: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fugn0nrlfcmaoyis038um.png" }, 
       { name: "Rest Assured", icon: "https://avatars.githubusercontent.com/u/19369327?s=200&v=4" }, // GitHub avatar for Rest Assured org
       { name: "JMeter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" }, 
       { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
